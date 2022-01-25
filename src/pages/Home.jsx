@@ -1,21 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/NavBar';
+import { Button } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import './Home.css';
 
 export default function Home() {
   return (
     <>
-      <h1>Seja bem-vindo(a) à pesquisa com funcionários</h1>
+      <NavBar className='avatar' />
+      <div className='home-container'>
+        <h1>Seja bem-vindo(a) à pesquisa com funcionários</h1>
 
-      <label>
-        <input placeholder='Insira seu nome' />
-        <Link to='/quiz'>
-          <button
-            type='submit'
-          >
-            Iniciar pesquisa
-          </button>
-        </Link>
-      </label>
+        <div className='label-container'>
+          <label>
+            <input placeholder='Insira seu nome' />
+            <Link className='link-questions' to='/quiz'>
+            <Button endIcon={<SendIcon />} color='primary' >Iniciar Pesquisa</Button>
+            </Link>
+          </label>
+        </div>
+      </div>
     </>
   );
 }

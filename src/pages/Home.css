@@ -1,0 +1,38 @@
+.home-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px
+}
+
+.home-container, h1 {
+  font-family:'Courier New', Courier, monospace;
+}
+
+.label-container {
+  align-items: center;
+  display: 'flex';
+  flex-direction: row;
+}
+
+.link-questions {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 880px) {
+  .home-container, h1 {
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  /* .home-container {
+    display: 'flex';
+    flex-direction: column;
+  } */
+
+  .home-container, h1 {
+    font-size: medium;
+  }
+}
+
