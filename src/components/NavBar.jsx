@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './KPI_Logo.png';
 import { Button } from '@mui/material';
-import './NavBar.css';
+import './styles/NavBar.css';
 
 export default function NavBar() {
   return (

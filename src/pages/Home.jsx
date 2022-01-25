@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import './Home.css';
+import './styles/Home.css';
 
 export default function Home() {
+  const [name, setName] = useState('');
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    if (localStorage.getItem('user')) {
+      localStorage.clear();
+    }
+  }, [])
+
+  useEffect(() => {
+    if (name !== '') {
+      setDisabled(false)
+    } else {
+      setDisabled(true)
+    }
+  }, [name, disabled]);
+
+  function setNameToLocalStorage() {
+    localStorage.setItem('user', name);
+  }
+
   return (
     <>
       <NavBar className='avatar' />
@@ -14,9 +35,18 @@ export default function Home() {
 
         <div className='label-container'>
           <label>
-            <input placeholder='Insira seu nome' />
-            <Link className='link-questions' to='/quiz'>
-            <Button endIcon={<SendIcon />} color='primary' >Iniciar Pesquisa</Button>
+            <input
+              onChange={ (e) => setName(e.target.value) }
+              placeholder='Insira seu nome'
+              value={ name }
+            />
+            <Link className='link-questions' to='/quiz/1'>
+              <Button
+                color='primary'
+                disabled={ disabled }
+                endIcon={ <SendIcon /> }
+                onClick={ setNameToLocalStorage() }
+              >Iniciar Pesquisa</Button>
             </Link>
           </label>
         </div>
