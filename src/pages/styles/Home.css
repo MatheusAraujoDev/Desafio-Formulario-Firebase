@@ -1,3 +1,7 @@
+body {
+  background-image: url(https://images8.alphacoders.com/391/391259.jpg);
+}
+
 .home-container {
   align-items: center;
   display: flex;
@@ -7,6 +11,7 @@
 
 .home-container, h2 {
   font-family:'Courier New', Courier, monospace;
+  font-style: italic;
 }
 
 .label-container {

@@ -4,8 +4,8 @@ import NavBar from '../components/NavBar';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import './styles/Home.css';
-// import { db } from '../firebase';
-import {QuestionService} from '../services/QuestionsService'
+// import {QuestionService} from '../services/QuestionsService'
+
 export default function Home() {
   const [name, setName] = useState('');
   const [disabled, setDisabled] = useState(true);
@@ -14,7 +14,7 @@ export default function Home() {
     if (localStorage.getItem('user')) {
       localStorage.clear();
     }
-       QuestionService.getQuestions().then(res => console.log(res.length));
+      //  QuestionService.getQuestions().then(res => console.log(res.length));
   }, []); 
 
   useEffect(() => {
@@ -32,7 +32,9 @@ export default function Home() {
   return (
     <>
       <NavBar className='avatar' />
+
       <div className='home-container'>
+
         <h2>Seja bem-vindo(a) à pesquisa com funcionários</h2>
 
         <div className='label-container'>
@@ -48,10 +50,13 @@ export default function Home() {
                 disabled={ disabled }
                 endIcon={ <SendIcon /> }
                 onClick={ setNameToLocalStorage() }
-              >Iniciar Pesquisa</Button>
+              >
+                Iniciar Pesquisa
+              </Button>
             </Link>
           </label>
         </div>
+
       </div>
     </>
   );

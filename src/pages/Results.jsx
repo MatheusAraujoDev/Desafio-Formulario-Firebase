@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
-// imṕort './styles/Results.css';
+import './styles/Results.css';
 
 export default function Results() {
   const [name, setName] = useState('');
@@ -13,8 +13,8 @@ export default function Results() {
 
   return (
     <div>
-      <h2>
-        { `Olá ${ name } estes foram os resultados da pesquisa:` }
+      <h2 className='header'>
+        { `Olá ${ name }, estes foram os resultados da pesquisa:` }
       </h2>
 
       <h3>

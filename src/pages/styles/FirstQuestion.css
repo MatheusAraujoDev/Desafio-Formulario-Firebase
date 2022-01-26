@@ -1,9 +1,10 @@
 .page-container {
   border: 1px solid gray;
+  background-color:lightsteelblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px auto;
+  margin: 90px auto;
   padding: 15px 20px;
   width: fit-content;
 }

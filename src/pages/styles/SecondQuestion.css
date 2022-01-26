@@ -1,0 +1,31 @@
+.page-container {
+  border: 1px solid gray;
+  background-color:lightsteelblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 90px auto;
+  padding: 15px 20px;
+  width: fit-content;
+}
+
+h4 {
+  margin: auto;
+}
+
+.page-answers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 30px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}

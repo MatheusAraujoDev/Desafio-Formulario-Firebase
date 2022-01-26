@@ -1,4 +1,4 @@
-// Função retirada da documentação para testar rotas em React. 
+// Função retirada da documentação do RTL para testar rotas em React. 
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
