@@ -1,16 +1,12 @@
 nav {
-  display: flex;
   align-items: center;
   background-color: white;
   border: 2px solid black;
   border-radius: 8px;
+  display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-
-/* nav:hover {
-  border: 2px solid black;
-} */
 
 img {
   height: 100px;

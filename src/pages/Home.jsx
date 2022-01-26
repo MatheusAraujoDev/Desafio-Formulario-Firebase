@@ -4,7 +4,6 @@ import NavBar from '../components/NavBar';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import './styles/Home.css';
-// import {QuestionService} from '../services/QuestionsService'
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -14,7 +13,6 @@ export default function Home() {
     if (localStorage.getItem('user')) {
       localStorage.clear();
     }
-      //  QuestionService.getQuestions().then(res => console.log(res.length));
   }, []); 
 
   useEffect(() => {

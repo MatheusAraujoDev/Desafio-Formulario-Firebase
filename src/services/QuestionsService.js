@@ -1,7 +1,6 @@
 import { db } from '../firebase';
 
 export const QuestionService = {
-
   async getQuestions() {
     const data = await db.collection("questions").get();
     let questions = [];

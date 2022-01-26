@@ -1,3 +1,4 @@
+// Sintaxe retirada da documentação do firebase.
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -14,10 +15,3 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const db = firebase.firestore();
-
-// database: Survey
-// vib9rq3KnMSHhJzsQNOD
-// coleção: questions
-
-// {username: nome}
-// {question1: resposta1, question2: resposta2}

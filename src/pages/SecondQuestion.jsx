@@ -17,8 +17,23 @@ export default function SecondQuestion() {
     }
   }, [question2, disabled])
 
-  function changeThisState(event) {
-    setQuestion2(event.target.value);
+  const handleValue = (event) => setQuestion2(event.target.value);
+
+  function renderAnswers() {
+    return(
+      <>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="1" />1</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="2" />2</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="3" />3</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="4" />4</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="5" />5</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="6" />6</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="7" />7</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="8" />8</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="9" />9</label>
+        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="10" />10</label>
+      </>
+    )
   }
 
   function submitQuestions() {
@@ -37,20 +52,12 @@ export default function SecondQuestion() {
     <div className='page-container'>
 
       <h2>2- Qual a sua satisfação com a Empresa?</h2>
+
       <div className='page-answers'>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="1" />1</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="2" />2</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="3" />3</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="4" />4</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="5" />5</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="6" />6</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="7" />7</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="8" />8</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="9" />9</label>
-          <label><input type="radio" onClick={(event)=> {changeThisState(event)}} name="satisfaction" value="10" />10</label>
+         { renderAnswers() }
       </div>
       <h4 style={ { display: 'flex',
-      flexDirection: 'row' } }><p style={ { marginRight: '160px' } }>Pouco satisfeito</p><p>Muito satisfeito</p></h4>
+      flexDirection: 'row' } }><p style={ { marginRight: '220px' } }>Pouco satisfeito</p><p>Muito satisfeito</p></h4>
 
       <div className='page-buttons'>
         <HomeButton />
