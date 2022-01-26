@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <NavBar className='avatar' />
       <div className='home-container'>
-        <h1>Seja bem-vindo(a) à pesquisa com funcionários</h1>
+        <h2>Seja bem-vindo(a) à pesquisa com funcionários</h2>
 
         <div className='label-container'>
           <label>

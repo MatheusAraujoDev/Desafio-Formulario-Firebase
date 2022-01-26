@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import HomeButton from '../components/HomeButton';
+import './styles/Question.css';
 
 export default function FirstQuestion() {
   return (
-    <>
+    <div className='page-container'>
       <h2>1- Quantas pessoas tem sua equipe? </h2>
         <div style={
         {
@@ -29,17 +30,20 @@ export default function FirstQuestion() {
           </label>
         </div>
 
-        <HomeButton />
+        <div className='page-buttons'>
+          <HomeButton />
+
+          <Link to='/quiz/2' style={ { textDecoration: 'none' } }>
+            <Button
+              color="success"
+              size='small'
+              variant="contained"
+            >
+              Próxima
+            </Button>
+          </Link>
+        </div>
         
-        <Link to='/quiz/2' style={ { textDecoration: 'none' } }>
-          <Button
-            color="success"
-            size='small'
-            variant="contained"
-          >
-            Próxima
-          </Button>
-        </Link>
-    </>
+    </div>
   );
 }

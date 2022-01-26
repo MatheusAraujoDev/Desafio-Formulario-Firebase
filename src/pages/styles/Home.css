@@ -5,7 +5,7 @@
   margin-top: 50px
 }
 
-.home-container, h1 {
+.home-container, h2 {
   font-family:'Courier New', Courier, monospace;
 }
 
@@ -20,13 +20,13 @@
 }
 
 @media screen and (max-width: 880px) {
-  .home-container, h1 {
+  .home-container, h2 {
     font-size: x-large;
   }
 }
 
 @media screen and (max-width: 670px) {
-  .home-container, h1 {
+  .home-container, h2 {
     font-size: medium;
   }
 }

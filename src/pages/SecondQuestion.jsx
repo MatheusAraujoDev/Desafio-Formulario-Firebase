@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import HomeButton from '../components/HomeButton';
+import './styles/Question.css';
 
 export default function SecondQuestion() {
   return (
-    <>
+    <div className='page-container'>
       <div>
           <h2>2- Qual sua satisfação com a Empresa?</h2>
             <label><input type="radio" name="satisfaction" id="" value="1" />1</label>
@@ -22,17 +23,19 @@ export default function SecondQuestion() {
           flexDirection: 'row' } }><p style={ { marginRight: '160px' } }>Pouco satisfeito</p><p>Muito satisfeito</p></h4>
         </div>
 
-        <HomeButton />
+        <div className='page-buttons'>
+          <HomeButton />
 
-        <Link to='/results' style={ { textDecoration: 'none' } }>
-          <Button
-            color="success"
-            size='small'
-            variant="contained"
-          >
-            Ver resultados
-          </Button>
-        </Link>        
-    </>
+          <Link to='/results' style={ { textDecoration: 'none' } }>
+            <Button
+              color="success"
+              size='small'
+              variant="contained"
+            >
+              Ver resultados
+            </Button>
+          </Link> 
+        </div>       
+    </div>
   );
 }

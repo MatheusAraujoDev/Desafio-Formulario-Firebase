@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
+// imṕort './styles/Results.css';
 
 export default function Results() {
   const [name, setName] = useState('');
