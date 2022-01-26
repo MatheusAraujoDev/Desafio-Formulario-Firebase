@@ -5,7 +5,7 @@ import FirstQuestion from "./pages/FirstQuestion";
 import SecondQuestion from "./pages/SecondQuestion";
 import Results from "./pages/Results";
 
-function App() {
+function App() { 
   return (
     <BrowserRouter>
       <Switch>    
