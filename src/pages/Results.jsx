@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
+import { ResponsiveBar } from '@nivo/bar'
+import data from '../services/data.json';
 import './styles/Results.css';
 
 export default function Results() {
@@ -9,7 +11,21 @@ export default function Results() {
     if (localStorage.getItem('user')) {
       setName(localStorage.getItem('user'));
     }
+    console.log(data);
   }, [name])
+
+  const Bar = () => {
+    return(
+      <>
+      <h3>Gráfico 1</h3>
+        <ResponsiveBar
+          data={data}
+          keys='degress'
+          indexBy='day'
+        />
+      </>
+    );
+  }
 
   return (
     <div>
@@ -17,9 +33,8 @@ export default function Results() {
         { `Olá ${ name }, estes foram os resultados da pesquisa:` }
       </h2>
 
-      <h3>
-        Gráfico 1
-      </h3>
+      {/* Testativa de criar um gráfico */}
+      { Bar() }
 
       <h3>
         Gráfico 2
