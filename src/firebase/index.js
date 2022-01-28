@@ -2,6 +2,29 @@
 // https://firebase.google.com/docs/storage/web/start#:~:text=import%20%7B-,initializeApp,-%7D%20from%20%22firebase/app
 import firebase from "firebase/app";
 import "firebase/firestore";
+// require('dotenv').config();
+
+// console.log(process.env);
+
+// const {
+//   API_KEY,
+//   AUTH_DOMAIN,
+//   DATABASE_URL,
+//   PROJECT_ID,
+//   STORAGE_BUCKET,
+//   MESSAGING_SENDER_ID,
+//   APP_ID
+// } = process.env;
+
+// const firebaseConfig = {
+//   apiKey: API_KEY,
+//   authDomain: AUTH_DOMAIN,
+//   databaseURL: DATABASE_URL,
+//   projectId: PROJECT_ID,
+//   storageBucket: STORAGE_BUCKET,
+//   messagingSenderId: MESSAGING_SENDER_ID,
+//   appId: APP_ID
+// };
 
 const firebaseConfig = {
   apiKey: "AIzaSyDuMJUuJm7Y5VbZ9YwH5VuZhhqFLtOpA3M",

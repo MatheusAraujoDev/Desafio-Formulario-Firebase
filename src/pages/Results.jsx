@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
 import NavBar from '../components/NavBar';
-import './styles/Results.css';
 import { QuestionService } from '../services/QuestionsService';
 import {FirstGraphic} from '../components/FirstGraphic';
 import {SecondGraphic} from '../components/SecondGraphic';
+import './styles/Results.css';
 
 export default function Results() {
   const [name, setName] = useState('');

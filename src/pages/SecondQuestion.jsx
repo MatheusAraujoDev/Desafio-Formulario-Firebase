@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import HomeButton from '../components/HomeButton';
+import FeedbackImage from '../components/FeedbackImage';
 import { QuestionService } from '../services/QuestionsService';
 import './styles/SecondQuestion.css';
 import Swal from 'sweetalert2';
@@ -51,34 +52,38 @@ export default function SecondQuestion() {
   };
 
   return (
-    <div className='page-container'>
+    <>
+      <div className='page-container'>
+        <h2>2- Qual a sua satisfação com a Empresa?</h2>
 
-      <h2>2- Qual a sua satisfação com a Empresa?</h2>
+        <div className='page-answers'>
+          { renderAnswers() }
+        </div>
+        <h4 style={ { display: 'flex',
+        flexDirection: 'row' } }><p style={ { marginRight: '220px' } }>Pouco satisfeito</p><p>Muito satisfeito</p></h4>
 
-      <div className='page-answers'>
-         { renderAnswers() }
-      </div>
-      <h4 style={ { display: 'flex',
-      flexDirection: 'row' } }><p style={ { marginRight: '220px' } }>Pouco satisfeito</p><p>Muito satisfeito</p></h4>
-
-      <div className='page-buttons'>
-        <HomeButton />
-        <Link
-          to={ disabled === true ? null : '/results' }
-          style={ { textDecoration: 'none' } }
-        >
-          <Button
-            color="success"
-            disabled={ disabled }
-            size='small'
-            onClick={ submitQuestions }
-            variant="contained"
+        <div className='page-buttons'>
+          <HomeButton />
+          <Link
+            to={ disabled === true ? null : '/results' }
+            style={ { textDecoration: 'none' } }
           >
-            Ver resultados
-          </Button>
-        </Link> 
+            <Button
+              color="success"
+              disabled={ disabled }
+              size='small'
+              onClick={ submitQuestions }
+              variant="contained"
+            >
+              Ver resultados
+            </Button>
+          </Link> 
+        </div>      
       </div>
-     
-    </div>
+
+      <div className='image'>
+        <FeedbackImage />
+      </div>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import HomeButton from '../components/HomeButton';
+import FeedbackImage from '../components/FeedbackImage';
 import './styles/FirstQuestion.css';
 
 export default function FirstQuestion() {
@@ -46,31 +47,36 @@ export default function FirstQuestion() {
   }
 
   return (
-    <div className='page-container'>
-      <h2>1- Quantas pessoas tem sua equipe? </h2>
+    <>
+      <div className='page-container'>
+        <h2>1- Quantas pessoas tem sua equipe? </h2>
 
-      <div style={ { display: 'flex', flexDirection: 'column' } }>
-        { renderAnswers() }
-      </div>
+        <div style={ { display: 'flex', flexDirection: 'column' } }>
+          { renderAnswers() }
+        </div>
 
-      <div className='page-buttons'>
-        <HomeButton />
-        <Link
-          to={ disabled === true ? null : '/quiz/2' }
-          style={ { textDecoration: 'none' } }
-        >
-          <Button
-            color="success"
-            disabled={ disabled }
-            size='small'
-            onClick={ handleQuestion() }
-            variant="contained"
+        <div className='page-buttons'>
+          <HomeButton />
+          <Link
+            to={ disabled === true ? null : '/quiz/2' }
+            style={ { textDecoration: 'none' } }
           >
-            Próxima
-          </Button>
-        </Link>
+            <Button
+              color="success"
+              disabled={ disabled }
+              size='small'
+              onClick={ handleQuestion() }
+              variant="contained"
+            >
+              Próxima
+            </Button>
+          </Link>
+        </div>
       </div>
 
-    </div>
+      <div className='image'>
+        <FeedbackImage />
+      </div>
+    </>
   );
 }

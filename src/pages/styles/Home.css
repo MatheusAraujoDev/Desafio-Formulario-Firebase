@@ -6,7 +6,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 50px
+  margin-top: 80px
 }
 
 .home-container, h2 {
@@ -22,6 +22,13 @@ body {
 
 .link-questions {
   text-decoration: none;
+}
+
+footer {
+  bottom:0;
+  font-size: small;
+  left: 15px;
+  position: absolute;
 }
 
 @media screen and (max-width: 880px) {

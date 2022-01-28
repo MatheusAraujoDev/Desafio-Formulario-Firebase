@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import { Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import Footer from '../components/Footer';
 import './styles/Home.css';
 
 export default function Home() {
@@ -58,6 +59,14 @@ export default function Home() {
             </Link>
           </label>
         </div>
+
+        <img
+          alt='gif'
+          style={ { height: '200px', width: '200px', marginTop: '60px' } }
+          src='https://c.tenor.com/J2RiuyvQgdEAAAAi/to-do-list-checklist.gif'
+        />
+
+        <Footer />
 
       </div>
     </>
