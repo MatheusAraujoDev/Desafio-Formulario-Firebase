@@ -42,7 +42,7 @@ export default function Home() {
               placeholder='Insira seu nome'
               value={ name }
             />
-            <Link className='link-questions' to='/quiz/1'>
+            <Link disabled={ disabled } className='link-questions' to='/quiz/1'>
               <Button
                 color='primary'
                 disabled={ disabled }

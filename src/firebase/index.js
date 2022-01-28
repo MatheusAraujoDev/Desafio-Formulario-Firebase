@@ -1,4 +1,5 @@
 // Sintaxe retirada da documentação do firebase.
+// https://firebase.google.com/docs/storage/web/start#:~:text=import%20%7B-,initializeApp,-%7D%20from%20%22firebase/app
 import firebase from "firebase/app";
 import "firebase/firestore";
 

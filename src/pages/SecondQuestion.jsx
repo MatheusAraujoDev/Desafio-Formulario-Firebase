@@ -5,6 +5,7 @@ import HomeButton from '../components/HomeButton';
 import { QuestionService } from '../services/QuestionsService';
 import './styles/SecondQuestion.css';
 import Swal from 'sweetalert2';
+
 export default function SecondQuestion() {
   const [question2, setQuestion2] = useState('');
   const [disabled, setDisabled] = useState(true);
@@ -22,16 +23,16 @@ export default function SecondQuestion() {
   function renderAnswers() {
     return(
       <>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="1" />1</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="2" />2</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="3" />3</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="4" />4</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="5" />5</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="6" />6</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="7" />7</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="8" />8</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="9" />9</label>
-        <label><input type="radio" onClick={ handleValue } name="satisfaction" value="10" />10</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="1" />1</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="2" />2</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="3" />3</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="4" />4</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="5" />5</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="6" />6</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="7" />7</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="8" />8</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="9" />9</label>
+        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="10" />10</label>
       </>
     )
   }
@@ -61,7 +62,6 @@ export default function SecondQuestion() {
 
       <div className='page-buttons'>
         <HomeButton />
-
         <Link to='/results' style={ { textDecoration: 'none' } }>
           <Button
             color="success"

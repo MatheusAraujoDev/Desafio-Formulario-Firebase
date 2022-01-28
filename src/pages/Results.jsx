@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
-import { ResponsiveBar } from '@nivo/bar'
-import data from '../services/data.json';
+import FirstTable from '../components/FirstTable';
+import NavBar from '../components/NavBar';
 import './styles/Results.css';
 
 export default function Results() {
@@ -11,29 +11,36 @@ export default function Results() {
     if (localStorage.getItem('user')) {
       setName(localStorage.getItem('user'));
     }
-    console.log(data);
-  }, [name])
+  }, [name]);
+
+  const data = [
+    {"day":"Monday", "degress": 59},
+    {"day":"Tuesday", "degress": 61},
+    {"day":"Wednesday", "degress": 55},
+    {"day":"Thursday", "degress": 78},
+    {"day":"Friday", "degress": 71},
+    {"day":"Saturday", "degress": 56},
+    {"day":"Sunday", "degress": 67}
+  ];
 
   const Bar = () => {
     return(
       <>
-      <h3>Gráfico 1</h3>
-        <ResponsiveBar
-          data={data}
-          keys='degress'
-          indexBy='day'
-        />
+      <div style={{height:400}}>
+        <FirstTable data={data} />
+      </div>
       </>
     );
   }
 
   return (
     <div>
+      <NavBar />
       <h2 className='header'>
         { `Olá ${ name }, estes foram os resultados da pesquisa:` }
       </h2>
 
-      {/* Testativa de criar um gráfico */}
+      <h3>Gráfico 1</h3>
       { Bar() }
 
       <h3>

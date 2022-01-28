@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -25,20 +26,20 @@ export default function FirstQuestion() {
   function renderAnswers() {
     return (
       <>
-        <label>
-          <input type="radio" onClick = { handleValue } name='peopleAmount' value="1 até 3" />1 até 3
+        <label htmlFor='peopleAmount'>
+          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="1 até 3" />1 até 3
         </label>
-        <label>
-          <input type="radio" onClick = { handleValue } name='peopleAmount' value="4 até 6" />4 até 6
+        <label htmlFor='peopleAmount'>
+          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="4 até 6" />4 até 6
         </label>
-        <label> 
-          <input type="radio" onClick = { handleValue } name='peopleAmount' value="7 até 9" />7 até 9
+        <label htmlFor='peopleAmount'> 
+          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="7 até 9" />7 até 9
         </label>
-        <label> 
-          <input type="radio" onClick = { handleValue } name='peopleAmount' value="10 até 14" />10 até 14
+        <label htmlFor='peopleAmount'> 
+          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="10 até 14" />10 até 14
         </label>
-        <label> 
-          <input type="radio" onClick = { handleValue } name='peopleAmount' value="15 ou mais" />15 ou mais
+        <label htmlFor='peopleAmount'> 
+          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="15 ou mais" />15 ou mais
         </label>
       </>
     )
@@ -66,7 +67,7 @@ export default function FirstQuestion() {
           </Button>
         </Link>
       </div>
-      
+
     </div>
   );
 }
