@@ -63,7 +63,10 @@ export default function SecondQuestion() {
 
       <div className='page-buttons'>
         <HomeButton />
-        <Link to='/results' style={ { textDecoration: 'none' } }>
+        <Link
+          to={ disabled === true ? null : '/results' }
+          style={ { textDecoration: 'none' } }
+        >
           <Button
             color="success"
             disabled={ disabled }
