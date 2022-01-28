@@ -23,6 +23,7 @@ export default function SecondQuestion() {
   function renderAnswers() {
     return(
       <>
+        {/* Criar um componente <SecondAnswer value={ 1 ...10} /> */}
         <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="1" />1</label>
         <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="2" />2</label>
         <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="3" />3</label>

@@ -1,37 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
-import FirstTable from '../components/FirstTable';
 import NavBar from '../components/NavBar';
 import './styles/Results.css';
+import { QuestionService } from '../services/QuestionsService';
+import {FirstGraphic} from '../components/FirstGraphic';
+import {SecondGraphic} from '../components/SecondGraphic';
 
 export default function Results() {
   const [name, setName] = useState('');
+  const [response, setResponse] = useState([]);
+
+  useEffect(() => {
+    QuestionService.getQuestions().then((questions) => {
+      setResponse(questions);
+    })
+  }, []);
 
   useEffect(() => {
     if (localStorage.getItem('user')) {
       setName(localStorage.getItem('user'));
     }
   }, [name]);
-
-  const data = [
-    {"day":"Monday", "degress": 59},
-    {"day":"Tuesday", "degress": 61},
-    {"day":"Wednesday", "degress": 55},
-    {"day":"Thursday", "degress": 78},
-    {"day":"Friday", "degress": 71},
-    {"day":"Saturday", "degress": 56},
-    {"day":"Sunday", "degress": 67}
-  ];
-
-  const Bar = () => {
-    return(
-      <>
-      <div style={{height:400}}>
-        <FirstTable data={data} />
-      </div>
-      </>
-    );
-  }
 
   return (
     <div>
@@ -41,11 +30,14 @@ export default function Results() {
       </h2>
 
       <h3>Gráfico 1</h3>
-      { Bar() }
+      <div style={{height:300}}> 
+        <FirstGraphic response={response} />
+      </div>
 
-      <h3>
-        Gráfico 2
-      </h3>
+      <h3>Gráfico 2</h3>
+      <div style={{height:300}}>
+        <SecondGraphic response={response} />
+      </div>
 
       <HomeButton />
     </div>
