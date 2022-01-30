@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import HomeButton from '../components/HomeButton';
 import NavBar from '../components/NavBar';
 import { QuestionService } from '../services/QuestionsService';
-import {FirstGraphic} from '../components/FirstGraphic';
-import {SecondGraphic} from '../components/SecondGraphic';
+import { FirstGraphic } from '../components/FirstGraphic';
+import { SecondGraphic } from '../components/SecondGraphic';
 import './styles/Results.css';
 
 export default function Results() {
@@ -29,17 +29,22 @@ export default function Results() {
         { `Olá ${ name }, estes foram os resultados da pesquisa:` }
       </h2>
 
-      <h3>Gráfico 1</h3>
-      <div style={{height:300}}> 
-        <FirstGraphic response={response} />
+      <div className='results-container'>
+        <h3 className='graph-title'>Gráfico 1</h3>
+        <div style={ { height:300 } }> 
+          <FirstGraphic response={ response } />
+        </div>
+
+        <h3 className='graph-title'>Gráfico 2</h3>
+        <div style={ { height:300 } }>
+          <SecondGraphic response={ response } />
+        </div>
       </div>
 
-      <h3>Gráfico 2</h3>
-      <div style={{height:300}}>
-        <SecondGraphic response={response} />
+      <div className='home-button'>
+        <HomeButton />
       </div>
-
-      <HomeButton />
+     
     </div>
   );
 }

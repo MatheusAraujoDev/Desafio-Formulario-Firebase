@@ -1,6 +1,6 @@
 import { Bar } from '../components/Bar';
 
-export function SecondGraphic({response}) {
+export function SecondGraphic({ response }) {
   const data = [
     {
       "response": "1",
@@ -53,7 +53,8 @@ export function SecondGraphic({response}) {
       "employeesColor": "hsl(168, 70%, 50%)",
     },
   ];
+
   return (
-    <Bar data={data} axisBottom="respostas" axisLeft="Numero de respostas" />
+    <Bar data={data} axisBottom="Nível de satisfação" axisLeft="Número de respostas" />
   )
 };

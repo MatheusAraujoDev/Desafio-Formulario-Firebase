@@ -1,3 +1,16 @@
 .header {
   text-align: center;
 }
+
+.graph-title {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.results-container {
+  padding-left: 20px;
+}
+
+.home-button {
+  text-align: center;
+  padding: 10px;
+}
