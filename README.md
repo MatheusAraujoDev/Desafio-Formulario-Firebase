@@ -65,15 +65,13 @@ Abra um novo terminal, certifique-se de que está na pasta correta do passo ante
 
 Para executar os testes basta executar o comando `npm test` na pasta raiz do projeto.
 
-Inserir Imagem
-
----
-
 ## Executar um teste específico:
 Para executar um teste específico você poderá usar o comando `npm test <nomedoarquivo>`.
 Como por exemplo o comando `npm test App.test.js`.
 
-Inserir Imagem
+![image](https://user-images.githubusercontent.com/80549950/151719562-e222564f-3fc8-4b33-b825-3215d7194f84.png)
+
+---
 
 # Referências
 - Material UI: https://mui.com/
