@@ -32,9 +32,15 @@ cada pergunta.
  - Ciclo de Vida de um componente React.
  - React Router para estrutura de rotas.
  - [React Testing Library](https://testing-library.com/) para realização de testes do FrontEnd.
+ - [Firebase](https://console.firebase.google.com/u/0/) para armazenar os dados da aplicação.
  - Biblioteca [Material UI](https://mui.com/pt/) para estilização do projeto.
  - Biblioteca [Nivo](https://nivo.rocks/) para criação de gráficos.
  - Assim como referências na documentação das ferramentas e no conteúdo do curso da [Trybe](https://www.betrybe.com/)
+
+---
+
+# Deploy
+- Para acessar o deploy da aplicação [clique aqui!](https://desafio-tecnico-key-people-insights-7h8ppra24-matheusaraujodev.vercel.app/). O deploy foi realizado utilizando Vercel.
 
 ---
 
