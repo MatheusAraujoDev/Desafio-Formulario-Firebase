@@ -7,6 +7,7 @@ describe('04- Testa a página de Resultados:', () => {
     render(<Results />);
     const navBar = screen.getByRole('navigation');
     expect(navBar).toBeInTheDocument();
+
     const button = screen.getByText(/Sobre/i);
     expect(button).toBeInTheDocument();
   });
