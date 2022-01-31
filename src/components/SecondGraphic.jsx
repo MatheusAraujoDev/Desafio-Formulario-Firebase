@@ -1,4 +1,5 @@
 import { Bar } from '../components/Bar';
+import PropTypes from 'prop-types';
 
 export function SecondGraphic({ response }) {
   const data = [
@@ -55,6 +56,12 @@ export function SecondGraphic({ response }) {
   ];
 
   return (
-    <Bar data={data} axisBottom="Nível de satisfação" axisLeft="Número de respostas" />
+    <Bar data={ data } axisBottom="Nível de satisfação" axisLeft="Número de respostas" />
   )
 };
+
+SecondGraphic.propTypes = {
+  data: PropTypes.array,
+  axisBottom: PropTypes.string,
+  axisLeft: PropTypes.string,
+}

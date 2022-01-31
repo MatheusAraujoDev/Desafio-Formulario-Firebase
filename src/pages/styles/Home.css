@@ -41,5 +41,6 @@ footer {
 @media screen and (max-width: 670px) {
   .home-container, h2 {
     font-size: medium;
+    text-align: center;
   }
 }

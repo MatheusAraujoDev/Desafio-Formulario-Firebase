@@ -57,7 +57,7 @@ export default function FirstQuestion() {
         <div className='page-buttons'>
           <HomeButton />
           <Link
-            to={ disabled === true ? null : '/quiz/2' }
+            to={ disabled === true ? '/quiz/1' : '/quiz/2' }
             style={ { textDecoration: 'none' } }
           >
             <Button

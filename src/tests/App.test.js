@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen, fireEvent } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Home from '../pages/Home';
 import renderWithRouter from '../renderWithRouter';
 
@@ -24,12 +24,9 @@ describe('01- Testa a página inicial:', () => {
     expect(input).toBeInTheDocument();
   });
 
-  it('Se contém o botão INICIAR que redireciona para a página de perguntas', () => {
-    const { history } = renderWithRouter(<Home />);
-    const redirectButton = screen.getByRole('button');
+  it('Se contém o botão INICIAR', () => {
+    renderWithRouter(<Home />);
+    const redirectButton = screen.getByText('Iniciar Pesquisa');
     expect(redirectButton).toBeInTheDocument();
-    fireEvent.click(redirectButton);
-    const { pathname } = history.location;
-    expect(pathname).toBe('/quiz/1');
   });
 });

@@ -31,12 +31,12 @@ export default function Results() {
 
       <div className='results-container'>
         <h3 className='graph-title'>Gráfico 1</h3>
-        <div style={ { height:300 } }> 
+        <div className='first-graph' style={ { height:300 } }> 
           <FirstGraphic response={ response } />
         </div>
 
         <h3 className='graph-title'>Gráfico 2</h3>
-        <div style={ { height:300 } }>
+        <div className='second-graph' style={ { height:300 } }>
           <SecondGraphic response={ response } />
         </div>
       </div>
