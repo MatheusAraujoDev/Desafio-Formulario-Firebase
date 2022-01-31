@@ -1,6 +1,7 @@
 import { Bar } from '../components/Bar';
+import PropTypes from 'prop-types';
 
-export function FirstGraphic({response}) {
+export function FirstGraphic({ response }) {
   const data = [
     {
       "response": "1 até 3",
@@ -29,6 +30,12 @@ export function FirstGraphic({response}) {
     }
   ];
   return (
-    <Bar data={data} axisBottom="respostas" axisLeft="Numero de respostas" />
+    <Bar data={ data } axisBottom="respostas" axisLeft="Numero de respostas" />
   )
+}
+
+FirstGraphic.propTypes = {
+  data: PropTypes.array,
+  axisBottom: PropTypes.string,
+  axisLeft: PropTypes.string,
 }

@@ -1,5 +1,8 @@
 .header {
+  color:rgb(9, 72, 189);
   text-align: center;
+  font-family: fantasy;
+  font-size: 2em;
 }
 
 .graph-title {
@@ -13,4 +16,20 @@
 .home-button {
   text-align: center;
   padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: x-large;
+  }
+
+  .first-graph {
+    height: 100px;
+    width: 500px;
+  }
+
+  .second-graph {
+    height: 100px;
+    width: 500px;
+  }
 }

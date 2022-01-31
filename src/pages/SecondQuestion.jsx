@@ -58,13 +58,14 @@ export default function SecondQuestion() {
         <div className='page-answers'>
           { renderAnswers() }
         </div>
+
         <h4 style={ { display: 'flex',
         flexDirection: 'row' } }><p style={ { marginRight: '220px' } }>Pouco satisfeito</p><p>Muito satisfeito</p></h4>
 
         <div className='page-buttons'>
           <HomeButton />
           <Link
-            to={ disabled === true ? null : '/results' }
+            to={ disabled === true ? '/quiz/2' : '/results' }
             style={ { textDecoration: 'none' } }
           >
             <Button

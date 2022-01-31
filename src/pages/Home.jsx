@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <NavBar className='avatar' />
+      <NavBar />
 
       <div className='home-container'>
 
@@ -46,7 +46,7 @@ export default function Home() {
             <Link
               disabled={ disabled }
               className='link-questions'
-              to={ disabled === true ? null : '/quiz/1'}
+              to={ disabled === true ? '' : '/quiz/1'}
             >
               <Button
                 color='primary'
