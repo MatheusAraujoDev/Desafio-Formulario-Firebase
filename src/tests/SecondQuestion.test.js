@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import SecondQuestion from '../pages/SecondQuestion';
 import renderWithRouter from '../renderWithRouter';
 
@@ -28,5 +28,24 @@ describe('03- Testa a Tela da segunda pergunta:', () => {
     const button2 = screen.getByRole('button', { name: 'Ver resultados' });
     expect(button1).toBeInTheDocument();
     expect(button2).toBeInTheDocument();
-  }); 
+  });
+
+  it('Testa se a imagem de Feedback aparece na tela', () => {
+    renderWithRouter(<SecondQuestion />);
+    const image = screen.getByRole('img');
+    expect(image.alt).toBe('imagem-feedback');
+    expect(image.src).toBe('https://agilepink.com/wp-content/uploads/2019/10/imagem_feedbacknew2_1138.jpg');
+  });
+
+  it('Se ao seleciona uma opção, e clica em "Ver Resultados", irá a tela de Resultados', () => {
+    const { history } = renderWithRouter(<SecondQuestion />);
+    const input = screen.getAllByTestId('satisfaction');
+    fireEvent.click(input[0]);
+
+    const viewResultsBtn = screen.getByRole('button', { name: /Ver resultados/i });
+    fireEvent.click(viewResultsBtn);
+
+    const url = history.location.pathname;
+    expect(url).toBe('/results');
+  });
 });

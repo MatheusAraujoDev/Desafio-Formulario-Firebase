@@ -24,6 +24,7 @@ export default function FirstQuestion() {
   const handleValue = (event) => setQuestion(event.target.value);
 
   function renderAnswers() {
+
     return (
       <>
         <label htmlFor='peopleAmount'>
