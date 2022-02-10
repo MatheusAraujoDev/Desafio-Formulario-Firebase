@@ -2,6 +2,7 @@ import React from 'react';
 import { screen, fireEvent } from '@testing-library/react';
 import Home from '../pages/Home';
 import renderWithRouter from '../renderWithRouter';
+import { AddAlarm } from '@mui/icons-material';
 
 describe('01- Testa a página inicial:', () => {
   it('Testa se a NavBar é renderizada corretamente', () => {

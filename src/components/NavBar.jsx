@@ -1,13 +1,16 @@
 import React from 'react';
-import Logo from './KPI_Logo.png';
 import { Button } from '@mui/material';
 import './styles/NavBar.css';
 
 export default function NavBar() {
+  function handleClick() {
+    return alert('url da página da empresa!')
+  }
+
   return (
     <nav>
-      <img alt='logo Key People Insights' src={ Logo } />
-      <Button variant="contained" href='https://www.kpis.tech/'>Sobre</Button>
+      <h1>Nome da Empresa</h1>
+      <Button variant="contained" onClick={handleClick}>Sobre</Button>
     </nav>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Results from '../pages/Results';
 
+
 describe('04- Testa a página de Resultados:', () => {
   it('Testa se a NavBar é renderizada corretamente', () => {
     render(<Results />);

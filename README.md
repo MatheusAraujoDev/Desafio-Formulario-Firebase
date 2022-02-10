@@ -1,10 +1,10 @@
-# Teste Técnico Key People Insights
+# Pesquisa de funcionários com Tela de Resultados
 ---
 # Sobre o Desafio
 ##### Contexto:
-Dentro da plataforma da KPIs nós possuímos um módulo de pesquisa com funcionários. São
+Dentro da plataforma de uma empresa tem-se um módulo de pesquisa com funcionários. São
 pesquisas que questionam como o funcionário está se sentindo e ajuda o RH de nossos clientes a
-entender o que podem fazer para melhorar a vida dos funcionários
+entender o que podem fazer para melhorar a vida dos funcionários.
 
 ##### O Desafio:
 Montar uma estrutura onde um usuário possa responder uma pesquisa e no final deve aparecer os gráficos com todos os resultados da pesquisa.

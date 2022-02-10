@@ -17,7 +17,7 @@ export default function Home() {
   }, []); 
 
   useEffect(() => {
-    if (name !== '') {
+    if (name.trim()) {
       setDisabled(false)
     } else {
       setDisabled(true)
@@ -25,7 +25,7 @@ export default function Home() {
   }, [name, disabled]);
 
   function setNameToLocalStorage() {
-    localStorage.setItem('user', name);
+    return localStorage.setItem('user', name);
   }
 
   return (
