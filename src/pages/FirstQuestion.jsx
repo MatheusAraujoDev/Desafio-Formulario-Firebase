@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import HomeButton from '../components/HomeButton';
+import FirstQuestionInput from '../components/FirstQuestionInput';
 import FeedbackImage from '../components/FeedbackImage';
 import './styles/FirstQuestion.css';
 
@@ -24,26 +25,15 @@ export default function FirstQuestion() {
   const handleValue = (event) => setQuestion(event.target.value);
 
   function renderAnswers() {
-
     return (
-      <>
-        <label htmlFor='peopleAmount'>
-          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="1to3" />1 até 3
-        </label>
-        <label htmlFor='peopleAmount'>
-          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="4to6" />4 até 6
-        </label>
-        <label htmlFor='peopleAmount'> 
-          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="7to9" />7 até 9
-        </label>
-        <label htmlFor='peopleAmount'> 
-          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="10to14" />10 até 14
-        </label>
-        <label htmlFor='peopleAmount'> 
-          <input type="radio" onClick={ handleValue } data-testid='peopleAmount' name='peopleAmount' value="15more" />15 ou mais
-        </label>
-      </>
-    )
+      <div style={{ display: 'flex', flexDirection:'column' }}>
+        <FirstQuestionInput state={ handleValue } inputValue='1to3' value='1 até 3' />
+        <FirstQuestionInput state={ handleValue } inputValue='4to6' value='4 até 6' />
+        <FirstQuestionInput state={ handleValue } inputValue='7to9' value='7 até 9' />
+        <FirstQuestionInput state={ handleValue } inputValue='10to14' value='10 até 14' />
+        <FirstQuestionInput state={ handleValue } inputValue='15more' value='15 ou mais' />
+      </div>
+    );
   }
 
   return (

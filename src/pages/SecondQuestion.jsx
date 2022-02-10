@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import HomeButton from '../components/HomeButton';
+import ComingBackButton from '../components/ComingBackButton';
+import SecondQuestionInput from '../components/SecondQuestionInput';
 import FeedbackImage from '../components/FeedbackImage';
 import { QuestionService } from '../services/QuestionsService';
 import './styles/SecondQuestion.css';
@@ -22,18 +24,18 @@ export default function SecondQuestion() {
   const handleValue = (event) => setQuestion2(event.target.value);
 
   function renderAnswers() {
-    return(
+    return (
       <>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="1" />1</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="2" />2</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="3" />3</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="4" />4</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="5" />5</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="6" />6</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="7" />7</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="8" />8</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="9" />9</label>
-        <label><input type="radio" onClick={ handleValue } data-testid='satisfaction' name="satisfaction" value="10" />10</label>
+        <SecondQuestionInput state={ handleValue } inputValue='1' value='1' />
+        <SecondQuestionInput state={ handleValue } inputValue='2' value='2' />
+        <SecondQuestionInput state={ handleValue } inputValue='3' value='3' />
+        <SecondQuestionInput state={ handleValue } inputValue='4' value='4' />
+        <SecondQuestionInput state={ handleValue } inputValue='5' value='5' />
+        <SecondQuestionInput state={ handleValue } inputValue='6' value='6' />
+        <SecondQuestionInput state={ handleValue } inputValue='7' value='7' />
+        <SecondQuestionInput state={ handleValue } inputValue='8' value='8' />
+        <SecondQuestionInput state={ handleValue } inputValue='9' value='9' />
+        <SecondQuestionInput state={ handleValue } inputValue='10' value='10' />
       </>
     )
   }
@@ -64,6 +66,7 @@ export default function SecondQuestion() {
 
         <div className='page-buttons'>
           <HomeButton />
+          <ComingBackButton text='/quiz/1' />
           <Link
             to={ disabled === true ? '/quiz/2' : '/results' }
             style={ { textDecoration: 'none' } }

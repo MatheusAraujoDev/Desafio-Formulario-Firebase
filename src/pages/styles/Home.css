@@ -28,7 +28,7 @@ footer {
   bottom:0;
   font-size: small;
   left: 15px;
-  position: absolute;
+  position: fixed;
   margin-bottom: 10px;
 }
 
