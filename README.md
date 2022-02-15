@@ -1,5 +1,8 @@
 # Pesquisa de funcionários com Tela de Resultados
 ---
+
+![image](https://user-images.githubusercontent.com/80549950/154074160-bc768129-b7d7-4352-955b-6ddf3691866c.png)
+
 # Sobre o Desafio
 ##### Contexto:
 Dentro da plataforma de uma empresa tem-se um módulo de pesquisa com funcionários. São
