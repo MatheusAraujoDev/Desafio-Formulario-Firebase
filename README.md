@@ -51,8 +51,8 @@ cada pergunta.
 Para o desenvolvimento do projeto utilizei as regras do linter [EsLint](https://eslint.org/docs/user-guide/getting-started). Para um código mais limpo, de melhor qualidade e evitar bugs.
 
  # Clone o projeto para sua máquina
-- Para fazer isso, basta abrir o seu terminal e digitar o comando `git clone git@github.com:MatheusAraujoDev/Desafio-Tecnico-Key-People-Insights.git`
-- Feito isso utilize o comando `cd desafio-tecnico-key-people-insights` para entrar na pasta do repositório que você acabou de clonar.
+- Para fazer isso, basta abrir o seu terminal e digitar o comando `git clone git@github.com:MatheusAraujoDev/Desafio-Formulario-Firebase.git`
+- Feito isso utilize o comando `cd Desafio-Formulario-Firebase` para entrar na pasta do repositório que você acabou de clonar.
 
 ---
 
