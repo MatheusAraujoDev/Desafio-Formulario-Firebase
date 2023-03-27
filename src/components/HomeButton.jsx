@@ -8,6 +8,8 @@ export default function HomeButton() {
     <Link style={ { textDecoration: 'none' } } to='/'>
       <Button
         color='primary'
+        variant='outlined'
+        name="Home"
         startIcon={ <HomeSharpIcon /> }
         style={ { alignItems: 'center' } }
       >

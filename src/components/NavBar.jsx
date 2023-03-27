@@ -9,7 +9,7 @@ export default function NavBar() {
 
   return (
     <nav>
-      <h1>Nome da Empresa</h1>
+      <h1 className='company-title'>Nome da Empresa</h1>
       <Button variant="contained" onClick={handleClick}>Sobre</Button>
     </nav>
   );

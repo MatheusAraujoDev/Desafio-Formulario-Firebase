@@ -13,6 +13,13 @@ img {
   width: 350px;
 }
 
+.company-title {
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: Montserrat, Courier, monospace;
+  color: #e96122;
+}
+
 @media screen and (max-width: 500px) {
   img {
     height: 60px;

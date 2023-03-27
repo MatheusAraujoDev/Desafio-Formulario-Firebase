@@ -10,14 +10,20 @@ body {
 }
 
 .home-container, h2 {
-  font-family:'Courier New', Courier, monospace;
+  font-family: Montserrat, Courier, monospace;
   font-style: italic;
+  font-size: xx-large;
 }
 
 .label-container {
-  align-items: center;
   display: 'flex';
   flex-direction: row;
+  justify-content: center;
+}
+
+.label-container input {
+  padding: 8px;
+  font-size: medium;
 }
 
 .link-questions {
